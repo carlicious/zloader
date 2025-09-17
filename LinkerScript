@@ -1,0 +1,12 @@
+/*OUTPUT_FORMAT(binary)*/
+
+SECTIONS {
+   .text : { *(.text) *(.rodata*) *(.data) *(.bss) }
+
+    /DISCARD/ : 
+    {
+        *(.comment)
+        *(.eh_frame)
+        *(.note.GNU-stack)
+    }
+}
